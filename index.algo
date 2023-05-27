@@ -1,0 +1,57 @@
+// QUESTION 1
+FUNCTION distinct_element(set 1, set 2  : ARRAY_OF INTEGER): INTEGER
+VAR
+    i : ARRAY_OF INTEGER
+    D_E : ARRAY_OF INTEGER
+    sum := 0; :ARRAY_OF INTEGER
+BEGIN
+   FOR i FROM 0 TO set 1.length DO
+   IF (set 1[i] not in D_E) THEN
+    add set 1 to D_E
+   END_IF
+   END_FOR
+
+   FOR i FROM 0 TO set 2.length DO
+   IF (set 1[i] not in D_E) THEN
+    add set 1 to D_E
+    END_IF
+   END_FOR
+   
+   sum:= 0;
+   FOR i FROM 0 TO D_E.length DO
+   sum:= sum + D_E[i]
+   END_FOR
+    RETURN sum ;
+END
+
+//QUESTION2
+
+PROCEDURE dot_product(vector1,vector2)
+VAR
+    i,sum: INTEGER
+    ps : INTEGER :=0;
+BEGIN 
+FOR i FROM 0 TO vector1.length DO
+     IF (vector1[i] == vector2[1]) THEN
+     calculate dot_product
+     ELSE
+     dot_product cant be calculated 
+       END_IF
+     ps := 0;
+     sum = vector1[i] * vector2[i]
+     ps = ps + sum
+END_FOR
+RETURN 
+ ps  
+END
+
+FUNCTION dot_product(vector1,vector2) : INTEGER
+BEGIN
+    IF (dot_product(vector1,vector2)==0) THEN
+        dot_product is orthogonal;
+    ELSE
+        dot_product is not orthogonal
+    END_IF
+    RETURN value ;
+END
+
